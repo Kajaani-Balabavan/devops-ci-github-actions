@@ -1,12 +1,12 @@
 const request = require("supertest");
-const { app, server } = require("../app"); // Import the app and server from app.js
+const { app, server, name } = require("../app"); // Import the app and server from app.js
 
 describe("GET /", () => {
   it("should return 200 status and the correct message", async () => {
     const response = await request(app).get("/");
     expect(response.status).toBe(200);
     expect(response.text).toBe(
-      "Basic DevOps CI with GitHub Actions from scratch!"
+      `${name} DevOps CI with GitHub Actions from scratch!`
     );
   });
 });
