@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("Basic DevOps CI with GitHub Actions from scratch!");
+  res.send("Advanced DevOps CI with GitHub Actions from scratch!");
 });
 
 const server = app.listen(PORT, () => {
