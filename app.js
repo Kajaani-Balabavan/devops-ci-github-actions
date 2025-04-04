@@ -6,6 +6,8 @@ app.get("/", (req, res) => {
   res.send("Basic DevOps CI with GitHub Actions from scratch!");
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+module.exports = { app, server }; // Export the server for testing purposes
